@@ -325,18 +325,127 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 1rem 0.75rem;
+  }
+
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
-  section {
-    padding: 2rem 1rem;
+
+  header p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
   }
+
   nav {
     flex-direction: column;
     align-items: center;
+    gap: 0.4rem;
   }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+    min-height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #intro p {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  .location-info {
+    padding: 1rem;
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+
+  .houses-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .house-card h3 {
+    font-size: 1.6rem;
+  }
+
   .menu-content {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .menu-column {
+    padding: 0;
+  }
+
+  .faq-item {
+    padding: 0.75rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1rem;
+  }
+
+  .qr-code img {
+    max-width: 220px;
+  }
+
+  footer {
+    font-size: 18px;
+    padding: 1.5rem 1rem;
+  }
+
+  li {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .day h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.75rem;
+  }
+
+  section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  #intro p {
+    font-size: 20px;
+  }
+
+  .house-header {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .qr-code img {
+    max-width: 180px;
   }
 }
