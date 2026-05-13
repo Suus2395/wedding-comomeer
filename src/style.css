@@ -56,6 +56,16 @@ nav a {
   transition: background 0.3s;
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #8b5a3c;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
 nav a:hover {
   background: #8b5a3c;
   color: white;
@@ -326,27 +336,42 @@ footer {
 
 @media (max-width: 768px) {
   header {
-    padding: 1rem 0.75rem;
+    padding: 0.6rem 0.75rem;
   }
 
   header h1 {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.1rem;
   }
 
   header p {
-    font-size: 0.85rem;
-    margin-bottom: 0.75rem;
+    font-size: 0.65rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin: 0 auto;
   }
 
   nav {
     flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav.nav-open {
+    max-height: 500px;
   }
 
   nav a {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
+    width: 100%;
+    text-align: center;
   }
 
   section {

@@ -4,6 +4,7 @@ document.querySelector('#app').innerHTML = `
   <header>
     <h1>Dylan & Susan</h1>
     <p>Giorno del Matrimonio • Agriturismo Castello di Vezio • Maggio 2026 • Lago di Como, Italia</p>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
     <nav>
       <a href="#agenda">Agenda</a>
       <a href="#locatie">Locatie</a>
@@ -311,5 +312,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
+    // Close mobile menu after clicking a link
+    document.querySelector('nav').classList.remove('nav-open');
   });
+});
+
+// Hamburger menu toggle
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+  document.querySelector('nav').classList.toggle('nav-open');
 });
