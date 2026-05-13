@@ -8,6 +8,7 @@ document.querySelector('#app').innerHTML = `
       <a href="#agenda">Agenda</a>
       <a href="#locatie">Locatie</a>
       <a href="#voorbereidingen">Voorbereidingen</a>
+      <a href="#indeling">Indeling huisjes</a>
       <a href="#fotos">Foto's bruiloft</a>
       <a href="#faq">Veelgestelde vragen</a>
       <a href="#menukaart">Menukaart</a>
@@ -88,6 +89,85 @@ document.querySelector('#app').innerHTML = `
     </ul>
   </section>
 
+  <section id="indeling">
+    <h2>Indeling huisjes</h2>
+    <div class="location-info">
+      <p>Hieronder vinden jullie de kamerindeling voor ons trouwweekend aan het prachtige Comomeer. ✨ Zoek jullie huisje op, pak een biertje, wijntje, Gin Tonic en geniet van een heerlijk Italiaans weekend vol liefde, gezelligheid en wedding vibes.</p>
+    </div>
+    <div class="houses-grid">
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 1</span><span>🍋</span></div>
+        <h3>Mansarda</h3>
+        <ul><li>Boyd Benneker</li><li>Kiki Muës</li><li>Jim Benneker</li><li>Merel Aldenkamp</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 2</span><span>🍋</span></div>
+        <h3>Mansardina</h3>
+        <ul><li>Jesper Vis</li><li>Lauren Kasteel</li><li>Niels Vis</li><li>Loes Schasfoort</li><li>Sander Vis</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 3</span><span>🍋</span></div>
+        <h3>Casa Cristina</h3>
+        <ul><li>Gerrit Slettenhaar</li><li>Mia Slettenhaar</li><li>Peter van den Hout</li><li>Erna van den Hout</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 4</span><span>🍋</span></div>
+        <h3>Casa Cima</h3>
+        <ul><li>Lars Doornbos</li><li>Jarno Meen</li><li>Jeroen Lammers</li><li>Martijn Lammers</li><li>Rick Koehorst</li><li>Kees Knippers</li><li>Eelco Kortink</li><li>Bart Schleiferboom</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 5</span><span>🍋</span></div>
+        <h3>Casa Selva</h3>
+        <ul><li>Kelly Heerenbout</li><li>Fieke Herfkens</li><li>Jolynn Te Molder</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 6</span><span>🍋</span></div>
+        <h3>Casa Giovanni</h3>
+        <ul><li>Peter Wichard</li><li>Kim Slettenhaar</li><li>Job Wichard</li><li>Sophie Wichard</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 7</span><span>🍋</span></div>
+        <h3>Casa Donato</h3>
+        <ul><li>Jeroen Hendriks</li><li>Diane Engelbertink</li><li>Tess Benneker</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 8</span><span>🍋</span></div>
+        <h3>Casa Giulia</h3>
+        <ul><li>Ivo Busch</li><li>Nadeshe Reef</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 9</span><span>🍋</span></div>
+        <h3>Casa Milena</h3>
+        <ul><li>Dylan Engelbertink</li><li>Susan Engelbertink</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 10</span><span>🍋</span></div>
+        <h3>Casa Delle Rose</h3>
+        <ul><li>Maaike Dokter</li><li>Inge De Winter</li><li>Annelies Pol</li><li>Sylvia Berfelo</li><li>Nadine Salimans</li><li>Lisanne Boschloo</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 11</span><span>🍋</span></div>
+        <h3>Casa Costanza</h3>
+        <ul><li>Marcel Engelbertink</li><li>Annemiek Teunis</li><li>Jill Teunis</li><li>Lot Teunis</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 12</span><span>🍋</span></div>
+        <h3>Casa Benedetta</h3>
+        <ul><li>Jos Rekers</li><li>Jolanda Rekers</li><li>Lynn Engelbertink</li><li>Wenroy Rekers</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 13</span><span>🍋</span></div>
+        <h3>Casa Leo</h3>
+        <ul><li>Romy Van Oorschot</li><li>Melissa Roeterdink</li></ul>
+      </div>
+      <div class="house-card">
+        <div class="house-header"><span>Huisje 14</span><span>🍋</span></div>
+        <h3>Casa Siddy</h3>
+        <ul><li>Wim Koldeweij</li><li>Alida Koldeweij</li></ul>
+      </div>
+    </div>
+  </section>
+
   <section id="fotos">
     <h2>Foto's bruiloft</h2>
     <div class="location-info">
@@ -117,6 +197,10 @@ document.querySelector('#app').innerHTML = `
     <div class="faq-item">
       <h3>Ik wil een stukje voordragen of een speech doen. Bij wie moet ik zijn? 🎤❤️</h3>
       <p>Hoe leuk! Marcel (vader van Dylan) neemt hierin het voortouw. Wil je iets voordragen, een verrassing plannen of even afstemmen? Stuur hem gerust een berichtje op 06-20717282.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Moet ik handdoeken meenemen? 🛁☀️</h3>
+      <p>Geen zorgen — in alle huisjes liggen handdoeken voor jullie klaar. Wil je tussendoor een frisse duik nemen in één van de zwembaden? Neem dan wel even een badhanddoek mee voor heerlijke poolside momenten ✨🏖️</p>
     </div>
   </section>
 
