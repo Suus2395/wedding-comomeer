@@ -176,7 +176,7 @@ document.querySelector('#app').innerHTML = `
       <p>Alvast bedankt voor het delen van jullie herinneringen! 📸</p>
     </div>
     <div class="qr-code">
-      <img src="/QR-code foto's bruiloft.jpeg" alt="QR-code foto's bruiloft">
+      <img src="./qr-code-fotos-bruiloft.jpeg" alt="QR-code foto's bruiloft">
     </div>
   </section>
 
