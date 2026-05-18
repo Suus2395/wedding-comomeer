@@ -321,3 +321,16 @@ document.querySelectorAll('nav a').forEach(anchor => {
 document.querySelector('.nav-toggle').addEventListener('click', () => {
   document.querySelector('nav').classList.toggle('nav-open');
 });
+
+// Content protection
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('cut', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.key === 'F12') e.preventDefault();
+  if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) e.preventDefault();
+  if (e.ctrlKey && (e.key === 's' || e.key === 'S')) e.preventDefault();
+  if (e.ctrlKey && (e.key === 'p' || e.key === 'P')) e.preventDefault();
+  if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J' || e.key === 'c' || e.key === 'C')) e.preventDefault();
+});
