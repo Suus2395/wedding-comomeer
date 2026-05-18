@@ -13,6 +13,18 @@
 img {
   pointer-events: none;
   -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+@media print {
+  * { display: none !important; }
+  body::after {
+    display: block !important;
+    content: 'Printen is niet toegestaan.';
+    font-size: 2rem;
+    text-align: center;
+    padding: 4rem;
+  }
 }
 
 body {

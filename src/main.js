@@ -327,10 +327,50 @@ document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('copy', e => e.preventDefault());
 document.addEventListener('cut', e => e.preventDefault());
 document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
 document.addEventListener('keydown', e => {
   if (e.key === 'F12') e.preventDefault();
   if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) e.preventDefault();
   if (e.ctrlKey && (e.key === 's' || e.key === 'S')) e.preventDefault();
   if (e.ctrlKey && (e.key === 'p' || e.key === 'P')) e.preventDefault();
+  if (e.ctrlKey && (e.key === 'a' || e.key === 'A')) e.preventDefault();
   if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J' || e.key === 'c' || e.key === 'C')) e.preventDefault();
 });
+
+// DevTools detection - clears page if DevTools opened
+(function() {
+  const threshold = 160;
+  const check = () => {
+    if (window.outerWidth - window.innerWidth > threshold ||
+        window.outerHeight - window.innerHeight > threshold) {
+      document.body.innerHTML = '';
+      document.title = '';
+    }
+  };
+  setInterval(check, 1000);
+  window.addEventListener('resize', check);
+})();
+
+// Debugger trap - stalls DevTools console
+(function anti() {
+  const start = performance.now();
+  debugger;
+  if (performance.now() - start > 100) {
+    document.body.innerHTML = '';
+    document.title = '';
+  }
+  setTimeout(anti, 1000);
+})();
+
+// Block print via JS
+window.addEventListener('beforeprint', () => {
+  document.body.style.display = 'none';
+});
+window.addEventListener('afterprint', () => {
+  document.body.style.display = '';
+});
+
+// Disable iframe embedding
+if (window.top !== window.self) {
+  window.top.location = window.self.location;
+}
